@@ -10,7 +10,7 @@ const ShowBottomInfo = ({imageObject}) => {
     return (
         <div className="bottom-info">
             <div className="copyright">
-                <h2>Copyright: {copyright}</h2>
+                <h2>Copyright: {!copyright ? 'NASA' : copyright }</h2>
                 <h4>{date}</h4>
             </div>
             <nav className="navigation">
