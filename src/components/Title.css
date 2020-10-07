@@ -1,0 +1,18 @@
+.title-box {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    width: 45%; 
+
+}
+
+.info {
+    width: 90%; 
+    font-size: 1.1rem; 
+}
+
+.title-box h1 {
+    font-size: 2.3rem; 
+}

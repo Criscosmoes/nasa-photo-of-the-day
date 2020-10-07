@@ -1,0 +1,28 @@
+.bottom-info {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    margin-top: 5.3%;
+    background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80');
+    background-position: cover;
+}
+
+.copyright {
+    margin-left:7%;
+}
+
+.navigation {
+    margin-left: 10%;
+    width: 38%; 
+}
+
+.navigation a {
+
+    color: white; 
+    font-weight: bolder;
+    margin: 4%; 
+    text-decoration: none;
+}
+
