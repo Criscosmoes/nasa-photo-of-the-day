@@ -19,7 +19,7 @@ function App() {
     axios.get('https://api.nasa.gov/planetary/apod', {
       params: {
         api_key: KEY,
-        date: '2014-11-17'
+        date: '2014-08-22'
       }
     })
     .then(response => {
@@ -40,7 +40,12 @@ function App() {
 
   return (
     <div className="app">
-      <h1>NASA Photo of the Day</h1>
+      <div className="header">
+        <form>
+          <input type="text" /> 
+        </form>
+        <h1 className="title">NASA Photo of the Day</h1>
+      </div>
       <ShowInfo imageObject={imageObject} /> 
       <div className="placeholder"></div>
       <ShowBottomInfo imageObject={imageObject} /> 
