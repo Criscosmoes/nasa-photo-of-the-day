@@ -1,0 +1,9 @@
+.image-box {
+    margin: 1%;  
+    max-width: 40%; 
+    border:2px solid #fff;
+    -moz-box-shadow: 10px 10px 50px black; 
+    -webkit-box-shadow: 10px 10px 50px black;;
+    box-shadow: 10px 10px 50px black;;
+    
+}
