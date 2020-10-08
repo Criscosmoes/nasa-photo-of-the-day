@@ -1,0 +1,33 @@
+.header {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+form {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 11.5%; 
+
+}
+
+.title {
+    margin-right: 24%;
+}
+form h3 {
+    text-align: center;
+}
+
+
+form input {
+    border: 3px solid black; 
+    padding: 4%; 
+    text-align: center;
+    border-radius: 5%;
+    -moz-box-shadow: 10px 10px 50px black; 
+    -webkit-box-shadow: 10px 10px 50px black;;
+    box-shadow: 10px 10px 50px black;;
+}

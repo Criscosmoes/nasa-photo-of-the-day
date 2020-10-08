@@ -3,12 +3,14 @@ import axios from 'axios';
 import "./App.css"; 
 import ShowBottomInfo from './components/ShowBottomInfo';
 import ShowInfo from './components/ShowInfo';
+import Header from './components/Header'; 
 
 
 function App() {
 
 
   const [imageObject, setimageObject] = useState({}); 
+  const [date, setDate] = useState(''); 
 
 
   const KEY = 'EAkMeJYeNQzx2vrqPszFenRWMrKTYINUaUF1pL7E'; 
@@ -37,15 +39,37 @@ function App() {
   }, [])
 
 
+  const onInputChange = (e) => {
+
+    let date = e.target.value; 
+
+    if(date.length === 10){
+      axios.get('https://api.nasa.gov/planetary/apod', {
+        params: {
+          api_key: KEY, 
+          date: date,
+        }
+      })
+      .then(response => {
+        console.log(response)
+        setimageObject(response.data)
+      })
+      .catch(error => {
+        console.log(error); 
+      })
+    }
+
+    
+
+
+
+  }
+
+
 
   return (
     <div className="app">
-      <div className="header">
-        <form>
-          <input type="text" /> 
-        </form>
-        <h1 className="title">NASA Photo of the Day</h1>
-      </div>
+      <Header onInputChange={onInputChange} /> 
       <ShowInfo imageObject={imageObject} /> 
       <div className="placeholder"></div>
       <ShowBottomInfo imageObject={imageObject} /> 
